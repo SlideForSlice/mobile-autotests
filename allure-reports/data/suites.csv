@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"broken","Tue Mar 05 23:41:21 YEKT 2024","Tue Mar 05 23:41:21 YEKT 2024","0","","testSections.authorization.mainScreen.Auth","","testSections.authorization.mainScreen.Auth","","AuthWithCall",""
