@@ -14,7 +14,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
-@Feature("Positive and negative cases for auth with call, sms, Tg, WA")
+@Feature("Positive and negative cases for auth with call, sms, Tg, WA from cart")
 public class Auth extends TestBase {
 
     ElementsForMainScreen elementsFromMainScreen = new ElementsForMainScreen();

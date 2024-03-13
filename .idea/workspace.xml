@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Initial commit" />
+    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/profile/UserProfile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForMainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,33 +39,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.Auth$PositiveAuth.authWithCall.executor": "Run",
-    "JUnit.Auth$PositiveAuth.executor": "Run",
-    "JUnit.Auth.authWithCall.executor": "Run",
-    "JUnit.Auth.authWithWhatsapp.executor": "Run",
-    "JUnit.AuthWithCall.authWithCall (1).executor": "Run",
-    "JUnit.AuthWithCall.authWithCall.executor": "Run",
-    "JUnit.AuthWithCall.executor": "Run",
-    "JUnit.AuthWithCall.sampleTest.executor": "Run",
-    "JUnit.AuthWithSMS.authWithSMS (1).executor": "Run",
-    "JUnit.AuthWithSMS.authWithSMS.executor": "Run",
-    "JUnit.AuthWithTelegram.authWithSMS.executor": "Run",
-    "JUnit.AuthWithTelegram.authWithTelegram (1).executor": "Run",
-    "JUnit.AuthWithTelegram.authWithTelegram.executor": "Run",
-    "JUnit.AuthWithWhatsapp.authWithTelegram.executor": "Run",
-    "JUnit.Module1.executor": "Run",
-    "JUnit.Module1.sampleTest.executor": "Run",
-    "Maven.AutoTest [package].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Java/AutoTest/src/test/java/testSections/authorization/fromCart",
-    "onboarding.tips.debug.path": "C:/Java/AutoTest/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.Auth$PositiveAuth.authWithCall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Auth$PositiveAuth.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Auth.authWithCall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Auth.authWithWhatsapp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithCall.authWithCall (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithCall.authWithCall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithCall.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithCall.sampleTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithSMS.authWithSMS (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithSMS.authWithSMS.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithTelegram.authWithSMS.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithTelegram.authWithTelegram (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithTelegram.authWithTelegram.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AuthWithWhatsapp.authWithTelegram.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Module1.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Module1.sampleTest.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.AutoTest [package].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Java/AutoTest&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;C:/Java/AutoTest/src/main/java/org/example/Main.java&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Java\AutoTest\src\test\java\testSections\authorization\fromCart" />
@@ -216,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710256158003</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit">
+      <option name="closed" value="true" />
+      <created>1710256936837</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1710256936837</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

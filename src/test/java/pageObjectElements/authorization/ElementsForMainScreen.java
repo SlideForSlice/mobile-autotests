@@ -106,6 +106,12 @@ public class ElementsForMainScreen extends TestBase {
         skipButton.click();
     }
 
+    @Step("Getting title from login page")
+    public Boolean getTitleFromLoginPage(){
+        var loginTitle = driver.findElement(AppiumBy.id("ru.goulash.develop:id/login_text_view"));
+        return loginTitle.isDisplayed();
+    }
+
 
 
 
