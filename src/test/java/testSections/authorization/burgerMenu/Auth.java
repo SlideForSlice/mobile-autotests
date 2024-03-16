@@ -1,7 +1,6 @@
 package testSections.authorization.burgerMenu;
 
 import config.TestBase;
-import io.appium.java_client.AppiumBy;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -12,10 +11,10 @@ import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import pageObjectElements.authorization.ElementsForBurgerMenu;
-import pageObjectElements.authorization.ElementsForMainScreen;
-import pageObjectElements.authorization.ElementsForProfilePage;
-import pageObjectElements.authorization.SystemElements;
+import pageObjectElements.allElements.ElementsForBurgerMenu;
+import pageObjectElements.allElements.ElementsForMainScreen;
+import pageObjectElements.allElements.ElementsForProfilePage;
+import pageObjectElements.allElements.SystemElements;
 
 @Feature("Positive and negative cases for auth with call, sms, Tg, WA from burger menu")
 public class Auth extends TestBase {
@@ -41,7 +40,7 @@ public class Auth extends TestBase {
             elementsForBurgerMenu.findLoginButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findCallButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -69,7 +68,7 @@ public class Auth extends TestBase {
             elementsForBurgerMenu.findLoginButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findSmsButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -97,7 +96,7 @@ public class Auth extends TestBase {
             elementsForBurgerMenu.findLoginButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findTelegramButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в Telegram", elementsFromMainScreen.getTitleFromTelegramAuthPage());
@@ -119,7 +118,7 @@ public class Auth extends TestBase {
             elementsForBurgerMenu.findLoginButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findWhatsappButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в WhatsApp", elementsFromMainScreen.getTitleFromWhatsappAuthPage());

@@ -1,4 +1,4 @@
-package pageObjectElements.authorization;
+package pageObjectElements.allElements;
 
 import config.TestBase;
 import io.appium.java_client.AppiumBy;
@@ -13,10 +13,10 @@ public class ElementsForMainScreen extends TestBase {
     }
 
     @Step("Send number to the number field")
-    public void sendNumber(String value){
+    public void sendNumber(){
         var numberInputField = driver.findElement(AppiumBy.id("ru.goulash.develop:id/edit"));
         numberInputField.click();
-        numberInputField.sendKeys(value);
+        numberInputField.sendKeys("9995554444");
     }
 
     @Step("Searching for call button")

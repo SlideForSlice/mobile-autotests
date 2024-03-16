@@ -7,7 +7,7 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import pageObjectElements.authorization.*;
+import pageObjectElements.allElements.*;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -43,7 +43,7 @@ public class Auth extends TestBase {
             elementsForCatalog.findCartButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findCallButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -81,7 +81,7 @@ public class Auth extends TestBase {
             elementsForCatalog.findCartButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findSmsButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -119,7 +119,7 @@ public class Auth extends TestBase {
             elementsForCatalog.findCartButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findTelegramButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в Telegram", elementsFromMainScreen.getTitleFromTelegramAuthPage());
@@ -159,7 +159,7 @@ public class Auth extends TestBase {
             elementsForCatalog.findCartButton();
 
             //Use common logic
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findWhatsappButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в WhatsApp", elementsFromMainScreen.getTitleFromWhatsappAuthPage());

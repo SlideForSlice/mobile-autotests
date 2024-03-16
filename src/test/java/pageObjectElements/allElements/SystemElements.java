@@ -1,4 +1,4 @@
-package pageObjectElements.authorization;
+package pageObjectElements.allElements;
 
 import config.TestBase;
 import io.appium.java_client.AppiumBy;

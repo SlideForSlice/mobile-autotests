@@ -1,4 +1,4 @@
-package pageObjectElements.authorization;
+package pageObjectElements.allElements;
 
 import config.TestBase;
 import io.appium.java_client.AppiumBy;
@@ -33,6 +33,12 @@ public class ElementsForBurgerMenu extends TestBase {
         var loginButton = driver.findElement(AppiumBy.id("ru.goulash.develop:id/login"));
         loginButton.click();
 
+    }
+
+    @Step("Find branches addresses button")
+    public void findBranches(){
+        var branches = driver.findElement(AppiumBy.id("ru.goulash.develop:id/departmentsItem"));
+        branches.click();
     }
 
 }

@@ -8,11 +8,10 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
-import pageObjectElements.authorization.*;
+import pageObjectElements.allElements.*;
 
-import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
+
 
 @Feature("Positive and negative cases with user profile")
 public class UserProfile extends TestBase{
@@ -21,9 +20,6 @@ public class UserProfile extends TestBase{
     ElementsForBurgerMenu elementsForBurgerMenu = new ElementsForBurgerMenu();
     ElementsForProfilePage elementsForProfilePage = new ElementsForProfilePage();
     SystemElements systemElements = new SystemElements();
-    ElementsForCatalog elementsForCatalog = new ElementsForCatalog();
-    ElementsForCart elementsForCart = new ElementsForCart();
-
     @Nested
     @Story("Positive cases of changing name, e-mail, sex, checkboxes and bonus cart status")
     class ChangingDataInUserProfile{
@@ -35,13 +31,13 @@ public class UserProfile extends TestBase{
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber("9995604734");
+                elementsFromMainScreen.sendNumber();
                 elementsFromMainScreen.findCallButton();
                 elementsFromMainScreen.findAcceptButton();
                 elementsFromMainScreen.sendKeysTEST();
-                elementsFromMainScreen.checkAddressModalWindow();
-
             }
+
+            elementsFromMainScreen.checkAddressModalWindow();
 
             elementsForBurgerMenu.findBurgerMenu();
             elementsForBurgerMenu.findProfileButton();
@@ -63,13 +59,13 @@ public class UserProfile extends TestBase{
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber("9995604734");
+                elementsFromMainScreen.sendNumber();
                 elementsFromMainScreen.findCallButton();
                 elementsFromMainScreen.findAcceptButton();
                 elementsFromMainScreen.sendKeysTEST();
-                elementsFromMainScreen.checkAddressModalWindow();
-
             }
+
+            elementsFromMainScreen.checkAddressModalWindow();
 
             elementsForBurgerMenu.findBurgerMenu();
             elementsForBurgerMenu.findProfileButton();
@@ -91,13 +87,13 @@ public class UserProfile extends TestBase{
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber("9995604734");
+                elementsFromMainScreen.sendNumber();
                 elementsFromMainScreen.findCallButton();
                 elementsFromMainScreen.findAcceptButton();
                 elementsFromMainScreen.sendKeysTEST();
-                elementsFromMainScreen.checkAddressModalWindow();
-
             }
+
+            elementsFromMainScreen.checkAddressModalWindow();
 
             elementsForBurgerMenu.findBurgerMenu();
             elementsForBurgerMenu.findProfileButton();
@@ -119,13 +115,13 @@ public class UserProfile extends TestBase{
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber("9995604734");
+                elementsFromMainScreen.sendNumber();
                 elementsFromMainScreen.findCallButton();
                 elementsFromMainScreen.findAcceptButton();
                 elementsFromMainScreen.sendKeysTEST();
-                elementsFromMainScreen.checkAddressModalWindow();
-
             }
+
+            elementsFromMainScreen.checkAddressModalWindow();
 
             elementsForBurgerMenu.findBurgerMenu();
             elementsForBurgerMenu.findProfileButton();
@@ -141,6 +137,38 @@ public class UserProfile extends TestBase{
             assertEquals(!(elementsForProfilePage.getEmailCheckbox().isSelected()), elementsForProfilePage.getEmailCheckbox().isSelected());
 
             systemElements.SwipeToCloseAllAppsFromTray();
+        }
+
+    }
+
+    @Nested
+    @Story("Creating and deleting user profile")
+    class DeletingUserProfile {
+
+        @Step("Deleting user profile")
+        @Test
+        public void DeleteUserProfile(){
+
+            elementsFromMainScreen.turnOnTheApp();
+
+            if (elementsFromMainScreen.getTitleFromLoginPage()){
+
+                elementsFromMainScreen.sendNumber();
+                elementsFromMainScreen.findCallButton();
+                elementsFromMainScreen.findAcceptButton();
+                elementsFromMainScreen.sendKeysTEST();
+            }
+
+            elementsFromMainScreen.checkAddressModalWindow();
+
+            elementsForBurgerMenu.findBurgerMenu();
+            elementsForBurgerMenu.findProfileButton();
+
+            elementsForProfilePage.findDeleteProfileButton();
+            elementsForProfilePage.findAgreeDeleteProfileButton();
+
+            systemElements.SwipeToCloseAllAppsFromTray();
+
         }
 
     }

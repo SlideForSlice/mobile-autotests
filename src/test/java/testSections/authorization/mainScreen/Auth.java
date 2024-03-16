@@ -6,11 +6,10 @@ import io.qameta.allure.Story;
 
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
-import org.junit.platform.suite.api.Suite;
-import pageObjectElements.authorization.ElementsForBurgerMenu;
-import pageObjectElements.authorization.ElementsForMainScreen;
-import pageObjectElements.authorization.ElementsForProfilePage;
-import pageObjectElements.authorization.SystemElements;
+import pageObjectElements.allElements.ElementsForBurgerMenu;
+import pageObjectElements.allElements.ElementsForMainScreen;
+import pageObjectElements.allElements.ElementsForProfilePage;
+import pageObjectElements.allElements.SystemElements;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -32,7 +31,7 @@ public class Auth extends ElementsForMainScreen {
         public void authWithCall() {
 
             elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findCallButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -54,7 +53,7 @@ public class Auth extends ElementsForMainScreen {
         public void authWithSMS(){
 
             elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findSmsButton();
             elementsFromMainScreen.findAcceptButton();
             elementsFromMainScreen.sendKeysTEST();
@@ -77,7 +76,7 @@ public class Auth extends ElementsForMainScreen {
         public void authWithTelegram() throws InterruptedException {
 
             elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findTelegramButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в Telegram", elementsFromMainScreen.getTitleFromTelegramAuthPage());
@@ -92,7 +91,7 @@ public class Auth extends ElementsForMainScreen {
         public void authWithWhatsapp() throws InterruptedException {
 
             elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber("9995604734");
+            elementsFromMainScreen.sendNumber();
             elementsFromMainScreen.findWhatsappButton();
             elementsFromMainScreen.findAcceptButton();
             assertEquals("Для завершения авторизации перейдите в WhatsApp", elementsFromMainScreen.getTitleFromWhatsappAuthPage());

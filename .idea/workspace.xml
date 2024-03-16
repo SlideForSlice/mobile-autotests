@@ -4,12 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/profile/UserProfile.java" afterDir="false" />
+    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Added tests for changing data in user profile">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForBranchesAddressesPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/bonusPage/BonusPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/branchesAddresses/Branches.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForMainScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForBurgerMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForBurgerMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForCatalog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForCatalog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForMainScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForMainScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/ElementsForProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/ElementsForProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pageObjectElements/authorization/SystemElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pageObjectElements/allElements/SystemElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/burgerMenu/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/burgerMenu/Auth.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/mainScreen/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/mainScreen/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/profile/UserProfile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/profile/UserProfile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710256936837</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added tests for changing data in user profile">
+      <option name="closed" value="true" />
+      <created>1710354915430</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1710354915430</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -269,6 +286,7 @@
     <MESSAGE value="first commit" />
     <MESSAGE value="Added basics of project" />
     <MESSAGE value="Initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
+    <MESSAGE value="Added tests for changing data in user profile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added tests for changing data in user profile" />
   </component>
 </project>

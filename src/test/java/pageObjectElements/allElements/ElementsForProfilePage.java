@@ -1,9 +1,8 @@
-package pageObjectElements.authorization;
+package pageObjectElements.allElements;
 
 import config.TestBase;
 import io.appium.java_client.AppiumBy;
 import io.qameta.allure.Step;
-import org.checkerframework.checker.units.qual.A;
 import org.openqa.selenium.WebElement;
 
 
@@ -95,6 +94,18 @@ public class ElementsForProfilePage extends TestBase {
     public void findSaveButton(){
         var saveButton = driver.findElement(AppiumBy.id("ru.goulash.develop:id/submit"));
         saveButton.click();
+    }
+
+    @Step("Find delete profile button")
+    public void findDeleteProfileButton(){
+        var deleteButton = driver.findElement(AppiumBy.id("ru.goulash.develop:id/remove_profile"));
+        deleteButton.click();
+    }
+
+    @Step("Find confirm delete number")
+    public void findAgreeDeleteProfileButton(){
+        var agreeButton = driver.findElement(AppiumBy.id("ru.goulash.develop:id/confirm"));
+        agreeButton.click();
     }
 
 }
