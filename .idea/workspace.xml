@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Added some tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/AppActions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/AuthType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/CommonAuthLogic.java" afterDir="false" />
+    <list default="true" id="fe19956f-60a1-4908-92b7-f4601e800315" name="Changes" comment="Was removed excess code in Auth.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/fromCart/Auth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/AppActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/AppActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/CommonAuthLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/CommonAuthLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testSections/authorization/mainScreen/Auth.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testSections/authorization/mainScreen/Auth.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -248,7 +246,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710604388350</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Was removed excess code in Auth.java">
+      <option name="closed" value="true" />
+      <created>1710963244665</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1710963244665</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -289,6 +295,7 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added tests for changing data in user profile" />
     <MESSAGE value="Added some tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added some tests" />
+    <MESSAGE value="Was removed excess code in Auth.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Was removed excess code in Auth.java" />
   </component>
 </project>

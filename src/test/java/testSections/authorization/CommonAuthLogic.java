@@ -56,7 +56,6 @@ public class CommonAuthLogic extends TestBase {
 
         } else if (type.equals(AuthType.WA) || type.equals(AuthType.TG)){
 
-            elementsFromMainScreen.sendNumber();
             typeOfAuth(type);
             elementsFromMainScreen.findAcceptButton();
 

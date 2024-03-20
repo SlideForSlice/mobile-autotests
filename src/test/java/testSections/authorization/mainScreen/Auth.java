@@ -44,7 +44,7 @@ public class Auth extends TestBase {
             elementsForBurgerMenu.findProfileButton();
             elementsForProfilePage.findLogoutButton();
 
-
+            commonAuthLogic.doWithApp(AppActions.EXIT);
 
         }
 
