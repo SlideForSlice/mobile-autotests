@@ -37,7 +37,7 @@ public class Auth extends TestBase {
             elementsFromMainScreen.checkAddressModalWindow();
 
             //Put product in cart, then go to cart
-            elementsForCatalog. findProductCard();
+            elementsForCatalog.findProductCard();
             elementsForCatalog.findPriceButtonOnProductCard();
             elementsForCatalog.scrollDownToCloseProductCard();
             elementsForCatalog.findCartButton();

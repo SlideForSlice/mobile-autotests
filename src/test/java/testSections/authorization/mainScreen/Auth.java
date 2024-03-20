@@ -1,5 +1,6 @@
 package testSections.authorization.mainScreen;
 
+import config.TestBase;
 import io.qameta.allure.Description;
 import io.qameta.allure.Feature;
 import io.qameta.allure.Story;
@@ -10,6 +11,9 @@ import pageObjectElements.allElements.ElementsForBurgerMenu;
 import pageObjectElements.allElements.ElementsForMainScreen;
 import pageObjectElements.allElements.ElementsForProfilePage;
 import pageObjectElements.allElements.SystemElements;
+import testSections.authorization.AppActions;
+import testSections.authorization.AuthType;
+import testSections.authorization.CommonAuthLogic;
 
 import static java.lang.Thread.sleep;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -17,11 +21,11 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 
 @Feature("Positive and negative cases for auth with call, sms, Tg, WA from main screen")
-public class Auth extends ElementsForMainScreen {
+public class Auth extends TestBase {
     ElementsForMainScreen elementsFromMainScreen = new ElementsForMainScreen();
     ElementsForBurgerMenu elementsForBurgerMenu = new ElementsForBurgerMenu();
     ElementsForProfilePage elementsForProfilePage = new ElementsForProfilePage();
-    SystemElements systemElements = new SystemElements();
+    CommonAuthLogic commonAuthLogic = new CommonAuthLogic();
 
     @Nested
     @Story("Positive cases")
@@ -30,12 +34,9 @@ public class Auth extends ElementsForMainScreen {
         @Test
         public void authWithCall() {
 
-            elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber();
-            elementsFromMainScreen.findCallButton();
-            elementsFromMainScreen.findAcceptButton();
-            elementsFromMainScreen.sendKeysTEST();
-            elementsFromMainScreen.checkAddressModalWindow();
+            commonAuthLogic.doWithApp(AppActions.START);
+
+            commonAuthLogic.authWith(AuthType.CALL);
 
             elementsForBurgerMenu.findBurgerMenu();
             assertNotEquals("Здравствуйте,", elementsForBurgerMenu.getTitleFromBurgerMenu());
@@ -43,8 +44,7 @@ public class Auth extends ElementsForMainScreen {
             elementsForBurgerMenu.findProfileButton();
             elementsForProfilePage.findLogoutButton();
 
-            systemElements.goToSystemTray();
-            systemElements.SwipeToCloseAllAppsFromTray();
+
 
         }
 
@@ -52,12 +52,9 @@ public class Auth extends ElementsForMainScreen {
         @Test
         public void authWithSMS(){
 
-            elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber();
-            elementsFromMainScreen.findSmsButton();
-            elementsFromMainScreen.findAcceptButton();
-            elementsFromMainScreen.sendKeysTEST();
-            elementsFromMainScreen.checkAddressModalWindow();
+            commonAuthLogic.doWithApp(AppActions.START);
+
+            commonAuthLogic.authWith(AuthType.SMS);
 
             elementsForBurgerMenu.findBurgerMenu();
             assertNotEquals("Здравствуйте,", elementsForBurgerMenu.getTitleFromBurgerMenu());
@@ -65,8 +62,7 @@ public class Auth extends ElementsForMainScreen {
             elementsForBurgerMenu.findProfileButton();
             elementsForProfilePage.findLogoutButton();
 
-            systemElements.goToSystemTray();
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
 
 
         }
@@ -75,30 +71,28 @@ public class Auth extends ElementsForMainScreen {
         @Test
         public void authWithTelegram() throws InterruptedException {
 
-            elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber();
-            elementsFromMainScreen.findTelegramButton();
-            elementsFromMainScreen.findAcceptButton();
+            commonAuthLogic.doWithApp(AppActions.START);
+
+            commonAuthLogic.authWith(AuthType.TG);
             assertEquals("Для завершения авторизации перейдите в Telegram", elementsFromMainScreen.getTitleFromTelegramAuthPage());
 
             sleep(3000);
-            systemElements.goToSystemTray();
-            systemElements.SwipeToCloseAllAppsFromTray();
+
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
 
         @Description("Auth with the Telegram")
         @Test
         public void authWithWhatsapp() throws InterruptedException {
 
-            elementsFromMainScreen.turnOnTheApp();
-            elementsFromMainScreen.sendNumber();
-            elementsFromMainScreen.findWhatsappButton();
-            elementsFromMainScreen.findAcceptButton();
+            commonAuthLogic.doWithApp(AppActions.START);
+
+            commonAuthLogic.authWith(AuthType.WA);
             assertEquals("Для завершения авторизации перейдите в WhatsApp", elementsFromMainScreen.getTitleFromWhatsappAuthPage());
 
             sleep(3000);
-            systemElements.goToSystemTray();
-            systemElements.SwipeToCloseAllAppsFromTray();
+
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
     }
 
