@@ -8,6 +8,9 @@ import io.qameta.allure.Story;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import pageObjectElements.allElements.*;
+import testSections.authorization.mainLogic.AppActions;
+import testSections.authorization.mainLogic.AuthType;
+import testSections.authorization.mainLogic.CommonAuthLogic;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -19,27 +22,23 @@ public class Branches extends TestBase {
     ElementsForProfilePage elementsForProfilePage = new ElementsForProfilePage();
     SystemElements systemElements = new SystemElements();
     ElementsForBranchesAddressesPage elementsForBranchesAddressesPage = new ElementsForBranchesAddressesPage();
+    CommonAuthLogic commonAuthLogic = new CommonAuthLogic();
 
     @Nested
     @Story("Checking branches addresses page")
     class BranchesAddresses{
 
 
-        @Step("Checking the map disply")
+        @Step("Checking the map display")
         @Test
         public void checkingMap(){
 
-            elementsFromMainScreen.turnOnTheApp();
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
-
-            elementsFromMainScreen.checkAddressModalWindow();
 
             elementsForBurgerMenu.findBurgerMenu();
             elementsForBurgerMenu.findBranches();

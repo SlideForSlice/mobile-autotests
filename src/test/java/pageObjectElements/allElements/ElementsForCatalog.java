@@ -46,4 +46,12 @@ public class ElementsForCatalog extends TestBase {
         goToCartButton.click();
     }
 
+    @Step("Find product then go to cart")
+    public void findtProductAndGoToCart(){
+        findProductCard();
+        findPriceButtonOnProductCard();
+        scrollDownToCloseProductCard();
+        findCartButton();
+    }
+
 }

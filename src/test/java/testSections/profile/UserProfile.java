@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 
 import pageObjectElements.allElements.*;
+import testSections.authorization.mainLogic.AppActions;
+import testSections.authorization.mainLogic.AuthType;
+import testSections.authorization.mainLogic.CommonAuthLogic;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -20,6 +23,7 @@ public class UserProfile extends TestBase{
     ElementsForBurgerMenu elementsForBurgerMenu = new ElementsForBurgerMenu();
     ElementsForProfilePage elementsForProfilePage = new ElementsForProfilePage();
     SystemElements systemElements = new SystemElements();
+    CommonAuthLogic commonAuthLogic = new CommonAuthLogic();
     @Nested
     @Story("Positive cases of changing name, e-mail, sex, checkboxes and bonus cart status")
     class ChangingDataInUserProfile{
@@ -27,147 +31,111 @@ public class UserProfile extends TestBase{
         @Story("Changing name")
         @Test
         public void userName() {
-            elementsFromMainScreen.turnOnTheApp();
+
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
 
-            elementsFromMainScreen.checkAddressModalWindow();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForProfilePage.changeUserNameAndSave();
 
-            elementsForProfilePage.changeUserName();
-            elementsForProfilePage.findSaveButton();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
             assertEquals("Новое имя", elementsForProfilePage.getUserName());
 
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
 
         @Step("Changing Email")
         @Test
         public void userEmail() {
-            elementsFromMainScreen.turnOnTheApp();
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
 
-            elementsFromMainScreen.checkAddressModalWindow();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForProfilePage.changeUserEmailAndSave();
 
-            elementsForProfilePage.changeUserEmail();
-            elementsForProfilePage.findSaveButton();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
             assertEquals("change@gmail.com", elementsForProfilePage.getUserEmail());
 
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
 
         @Step("Changing sex")
         @Test
         public void userSex(){
-            elementsFromMainScreen.turnOnTheApp();
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
 
-            elementsFromMainScreen.checkAddressModalWindow();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForProfilePage.changeUserSexAndSave();
 
-            elementsForProfilePage.changeUserSex();
-            elementsForProfilePage.findSaveButton();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
             assertEquals("Женский", elementsForProfilePage.getUserSex());
 
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
 
         @Step("Checking checkboxes")
         @Test
         public void checkboxes(){
-            elementsFromMainScreen.turnOnTheApp();
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
 
-            elementsFromMainScreen.checkAddressModalWindow();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForProfilePage.uncheckCheckboxesAndSave();
 
-            elementsForProfilePage.uncheckSmsCheckbox();
-            elementsForProfilePage.uncheckEmailCheckbox();
-            elementsForProfilePage.findSaveButton();
-
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
             assertEquals(!(elementsForProfilePage.getSmsCheckbox().isSelected()), elementsForProfilePage.getSmsCheckbox().isSelected());
             assertEquals(!(elementsForProfilePage.getEmailCheckbox().isSelected()), elementsForProfilePage.getEmailCheckbox().isSelected());
 
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
         }
 
     }
 
     @Nested
-    @Story("Creating and deleting user profile")
+    @Story("Deleting user profile")
     class DeletingUserProfile {
 
         @Step("Deleting user profile")
         @Test
         public void DeleteUserProfile(){
 
-            elementsFromMainScreen.turnOnTheApp();
+            commonAuthLogic.doWithApp(AppActions.START);
 
             if (elementsFromMainScreen.getTitleFromLoginPage()){
 
-                elementsFromMainScreen.sendNumber();
-                elementsFromMainScreen.findCallButton();
-                elementsFromMainScreen.findAcceptButton();
-                elementsFromMainScreen.sendKeysTEST();
+                commonAuthLogic.authWith(AuthType.CALL);
             }
 
-            elementsFromMainScreen.checkAddressModalWindow();
+            elementsForBurgerMenu.goToProfileFromCatalog();
 
-            elementsForBurgerMenu.findBurgerMenu();
-            elementsForBurgerMenu.findProfileButton();
+            elementsForProfilePage.deleteProfile();
 
-            elementsForProfilePage.findDeleteProfileButton();
-            elementsForProfilePage.findAgreeDeleteProfileButton();
-
-            systemElements.SwipeToCloseAllAppsFromTray();
+            commonAuthLogic.doWithApp(AppActions.EXIT);
 
         }
 

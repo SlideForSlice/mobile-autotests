@@ -41,4 +41,11 @@ public class ElementsForBurgerMenu extends TestBase {
         branches.click();
     }
 
+    @Step("Way to user profile from catalog")
+    public void goToProfileFromCatalog(){
+        findBurgerMenu();
+        findProfileButton();
+    }
+
+
 }

@@ -1,4 +1,4 @@
-package testSections.authorization;
+package testSections.authorization.mainLogic;
 
 public enum AppActions {
     START,

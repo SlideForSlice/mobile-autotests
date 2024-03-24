@@ -108,4 +108,37 @@ public class ElementsForProfilePage extends TestBase {
         agreeButton.click();
     }
 
+    @Step("Change name and save")
+    public void changeUserNameAndSave(){
+        changeUserName();
+        findSaveButton();
+    }
+
+    @Step("Change email and save")
+    public void changeUserEmailAndSave(){
+        changeUserEmail();
+        findSaveButton();
+    }
+
+    @Step("Change user sex and save")
+    public void changeUserSexAndSave(){
+        changeUserSex();
+        findSaveButton();
+    }
+
+    @Step("Uncheck checkboxes and save")
+    public void uncheckCheckboxesAndSave(){
+        uncheckSmsCheckbox();
+        uncheckEmailCheckbox();
+        findSaveButton();
+
+    }
+
+    @Step("Delete profile")
+    public void deleteProfile(){
+        findDeleteProfileButton();
+        findAgreeDeleteProfileButton();
+    }
+
+
 }

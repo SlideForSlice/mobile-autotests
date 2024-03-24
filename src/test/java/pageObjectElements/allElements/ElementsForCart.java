@@ -27,6 +27,13 @@ public class ElementsForCart extends TestBase {
         clearButton.click();
     }
 
+    @Step("Way to clear the cart")
+    public void clearTheCart(){
+        findCartTitle();
+        findClearCartIcon();
+        findClearCartButton();
+    }
+
 
 
 }

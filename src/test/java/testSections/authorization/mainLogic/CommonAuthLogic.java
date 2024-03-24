@@ -1,13 +1,10 @@
-package testSections.authorization;
+package testSections.authorization.mainLogic;
 
 import config.TestBase;
 import io.qameta.allure.Step;
 
 import pageObjectElements.allElements.*;
 
-import static java.lang.Thread.sleep;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 public class CommonAuthLogic extends TestBase {
 
@@ -39,6 +36,7 @@ public class CommonAuthLogic extends TestBase {
         }
     }
 
+
     /**
      * Use SMS, CALL, WA, TG
      */
@@ -61,6 +59,7 @@ public class CommonAuthLogic extends TestBase {
 
         }
 
+
     }
 
 
@@ -81,6 +80,20 @@ public class CommonAuthLogic extends TestBase {
             default: throw new IllegalArgumentException("No such type of action");
         }
 
+    }
+
+    @Step("Login or Logout")
+    public void typeOfLogFromCatalog(LoginOrLogout type){
+        switch (type){
+            case LOGIN:
+                elementsFromMainScreen.findSkipButton();
+                elementsFromMainScreen.checkAddressModalWindow();
+                break;
+            case LOGOUT:
+                elementsForBurgerMenu.findProfileButton();
+                elementsForProfilePage.findLogoutButton();
+                break;
+        }
     }
 
 
